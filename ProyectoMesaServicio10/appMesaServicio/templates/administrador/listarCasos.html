@@ -49,18 +49,18 @@
     </table>
 </div>
 
-<!-- The Modal -->
+
 <div class="modal" id="modalTecnicos">
     <div class="modal-dialog">
         <div class="modal-content">
 
-            <!-- Modal Header -->
+           
             <div class="modal-header">
                 <h4 class="modal-title">Asignación Técnico Casos</h4>
                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
             <form action="/asignarTecnicoCaso/" method="post">
-            <!-- Modal body -->
+           
             <div class="modal-body">
                
                     {% csrf_token %}
@@ -78,7 +78,6 @@
                 
             </div>
 
-            <!-- Modal footer -->
             <div class="modal-footer">
                 <button type="submit" class="btn btn-secondary" data-bs-dismiss="modal">Asignar</button>
                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>

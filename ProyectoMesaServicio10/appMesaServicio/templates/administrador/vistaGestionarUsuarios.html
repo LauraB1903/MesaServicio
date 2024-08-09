@@ -37,7 +37,7 @@
         </thead>
         <tbody>
             {% for usuario in usuarios %}
-            <!--para no mostrar lo del superusuario-->
+            {% comment %} para no mostrar lo del superusuario {% endcomment %}
             {% if usuario.is_superuser is False%}
             <tr>
                 <td>{{usuario.first_name}} {{usuario.last_name}}</td>

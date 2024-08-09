@@ -49,18 +49,16 @@
     </table>
 </div>
 
-<!-- The Modal -->
 <div class="modal" id="modalSolucionCaso">
     <div class="modal-dialog">
         <div class="modal-content">
 
-            <!-- Modal Header -->
             <div class="modal-header">
                 <h4 class="modal-title">Respuesta Solución Caso</h4>
                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
             <form action="/solucionarCaso/" method="post">
-                <!-- Modal body -->
+
                 <div class="modal-body">
 
                     {% csrf_token %}
@@ -90,7 +88,6 @@
                     <input type="hidden" name="idCaso" id="idCaso" value="">
                 </div>
 
-                <!-- Modal footer -->
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-secondary" data-bs-dismiss="modal">Registrar</button>
                     <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>

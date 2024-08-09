@@ -20,7 +20,7 @@ import os
 from django.db.models.functions import ExtractMonth
 
 
-# Create your views here.
+
 
 
 def inicio(request):
@@ -561,20 +561,17 @@ def generarPdfSolicitudes(request):
     from appMesaServicio.pdfSolicitudes import Pdf
     # obtenemos los datos de las solicitudes
     solicitudes = Solicitud.objects.all()
-    # crear un objeto de tipo Pdf que viene de la clase
-    # creada en el archivo pdfSolicitudes.py
+    # crear un objeto de tipo Pdf que viene de la clase creada en el archivo pdfSolicitudes.py
     doc = Pdf()
     # permite colocar número de página en el pdf
     doc.alias_nb_pages()
-    # agrega una pagpina
+    # agrega una pagina
     doc.add_page()
-    # configura letra negrilla tamaño 12
     doc.set_font("Arial", "B", 12)
-    # se llama al método mostrarDatos del objeto y se le
-    # pasan las solicitudes
+    # se llama al método mostrarDatos del objeto y se lepasan las solicitudes
+   
     doc.mostrarDatos(solicitudes)
     # exporta el pdf y lo guarda en la carpeta media
     doc.output(f'media/solicitudes.pdf')
-    # retorna a un html para mostrarlo
     return render(request, "administrador/mostrarPdf.html")
         

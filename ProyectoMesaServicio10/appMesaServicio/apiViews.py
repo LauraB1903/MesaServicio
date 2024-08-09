@@ -1,6 +1,5 @@
 from appMesaServicio.models import *
 from .views import generarPassword
-# work
 from rest_framework import generics
 from rest_framework.response import Response
 from rest_framework.views import APIView
@@ -61,7 +60,7 @@ class UserApi(APIView):
             passwordGenerado = generarPassword()
             print(f"password {passwordGenerado}")
             user.set_password(passwordGenerado)
-            # se actualiza el user
+            # se actualiza el usuario
             user.save()
             serializer_response = UserSerializer(user)
             return Response(serializer_response.data, status=status.HTTP_201_CREATED)
